@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanLens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">LoanLens</div>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+    
+    <div class="hero-left">
+        <h1>Check Your Loan Eligibility in 2 Minutes</h1>
+        <p>
+            We help you predict loan approval chances using smart analysis.
+        </p>
+        <a href="/predict">
+        <button >Check Eligibility</button>
+        </a>
+    </div>
+
+    <div class="hero-right">
+        <img src="{{ url_for('static', filename='right_img.png') }}">
+    </div>
+
+</section>
+
+</body>
+</html>

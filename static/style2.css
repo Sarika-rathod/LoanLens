@@ -1,0 +1,44 @@
+/* Result box */
+.result-box {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Approved */
+.approved {
+    background: #e6f9ec;
+    color: #28a745;
+}
+
+/* Rejected */
+.rejected {
+    background: #fdeaea;
+    color: #dc3545;
+}
+
+/* Description */
+.desc {
+    color: #555;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Button (override previous) */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}

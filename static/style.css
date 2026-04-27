@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image:
+        radial-gradient(circle at 30% 80%, rgba(90, 50, 255, 0.6), transparent 40%),
+        radial-gradient(circle at 50% 100%, rgba(146, 13, 228, 0.811), transparent 50%),
+        linear-gradient(to top, #000000, #0a0a0a);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 80px;
+}
+.hero button{
+    padding: 8px;
+    border-radius: 10px;
+}
+/* LEFT CONTENT */
+.hero-left {
+    width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-left p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+/* RIGHT IMAGE */
+.hero-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; /* pushes image to right */
+}
+
+/* IMAGE STYLE */
+.hero-right img {
+    width: 320px;
+    transform: rotate(-10deg);
+   right: 50px;
+}
+
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar nav {
+        display: none; /* hide menu on mobile */
+    }
+
+    /* HERO SECTION */
+    .hero {
+        flex-direction: column; /* stack vertically */
+        text-align: center;
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    /* TEXT */
+    .hero-left h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .hero-left p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* BUTTON */
+    .hero-left button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* IMAGE */
+    .hero-right img {
+        width: 220px;
+        transform: rotate(0deg); /* remove tilt on mobile */
+    }
+}

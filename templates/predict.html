@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+
+<h2>Enter Details</h2>
+
+<form action="/predict" method="POST">
+
+    <input type="number" name="Applicant_Income" placeholder="Applicant Income" required>
+    <input type="number" name="Coapplicant_Income" placeholder="Coapplicant Income" required>
+
+    <select name="Employment_Status" required>
+        <option value="">Select employment status</option>
+        <option>Salaried</option>
+        <option>Self-employed</option>
+    </select>
+
+    <input type="number" name="Age" placeholder="Age" required>
+
+    <select name="Marital_Status" required>
+        <option value="">Select marital status</option>
+        <option>Single</option>
+        <option>Married</option>
+    </select>
+
+    <input type="number" name="Dependents" placeholder="Dependents" required>
+    <input type="number" name="Credit_Score" placeholder="Credit Score" required>
+
+    
+    <input type="number" name="Existing_Loans" placeholder="Existing Loans" required>
+
+    <input type="number" step="0.01" name="DTI_Ratio" placeholder="DTI Ratio" required>
+    <input type="number" name="Savings" placeholder="Savings" required>
+    <input type="number" name="Collateral_Value" placeholder="Collateral Value" required>
+    <input type="number" name="Loan_Amount" placeholder="Loan Amount" required>
+    <input type="number" name="Loan_Term" placeholder="Loan Term" required>
+
+    <select name="Loan_Purpose" required>
+        <option value="">Select loan purpose</option>
+        <option>Home</option>
+        <option>Car</option>
+        <option>Education</option>
+    </select>
+
+    <select name="Property_Area" required>
+        <option value="">Select location</option>
+        <option>Urban</option>
+        <option>Rural</option>
+        <option>Semiurban</option>
+    </select>
+
+    <select name="Education_Level" required>
+        <option value="">Select education level</option>
+        <option>Graduate</option>
+        <option>Not_Graduate</option>
+    </select>
+
+    <select name="Gender" required>
+        <option value="">Select gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <select name="Employer_Category" required>
+        <option value="">Select employer category</option>
+        <option>Private</option>
+        <option>Government</option>
+    </select>
+
+   
+    <button type="submit">Predict</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
