@@ -12,7 +12,7 @@ app = Flask(__name__)
 model = joblib.load("model.pkl")
 ohe = joblib.load("encoder.pkl")
 scaler = joblib.load("scaler.pkl")
-features = joblib.load("features.pkl")   # ✅ IMPORTANT
+features = joblib.load("features.pkl")   
 
 
 cols = [
