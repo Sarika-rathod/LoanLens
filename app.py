@@ -3,20 +3,18 @@ import pandas as pd
 import joblib
 import os
 
-# Fix OpenBLAS memory issue
+
 os.environ["OPENBLAS_NUM_THREADS"] = "1"
 
 app = Flask(__name__)
 
-# =========================
-# Load saved objects
-# =========================
+
 model = joblib.load("model.pkl")
 ohe = joblib.load("encoder.pkl")
 scaler = joblib.load("scaler.pkl")
 features = joblib.load("features.pkl")   # ✅ IMPORTANT
 
-# Columns used for OneHotEncoding
+
 cols = [
     "Employment_Status",
     "Marital_Status",
@@ -26,17 +24,13 @@ cols = [
     "Employer_Category"
 ]
 
-# =========================
-# HOME PAGE
-# =========================
+
 @app.route('/')
 def home():
     return render_template("index.html")
 
 
-# =========================
-# PREDICT ROUTE
-# =========================
+
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
 
@@ -45,15 +39,11 @@ def predict():
         return render_template("predict.html")
 
     try:
-        # =========================
-        # Get form data
-        # =========================
+       
         data = request.form
         new_data = pd.DataFrame([data])
 
-        # =========================
-        # Convert numeric columns
-        # =========================
+       
         numeric_cols = [
             "Applicant_Income", "Coapplicant_Income", "Age",
             "Dependents", "Credit_Score", "Existing_Loans",
@@ -109,6 +99,6 @@ def predict():
         return f"<h2>Error occurred:</h2><p>{str(e)}</p>"
 
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
