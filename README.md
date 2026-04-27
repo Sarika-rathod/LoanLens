@@ -1,0 +1,1 @@
+A machine learning–based web application that predicts whether a loan application will be approved or rejected based on user financial and personal details. The model is built using Logistic Regression and deployed using Flask with a simple and interactive UI.
